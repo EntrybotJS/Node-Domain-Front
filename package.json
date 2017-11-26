@@ -1,0 +1,41 @@
+{
+  "name": "node-domain-front",
+  "version": "0.0.1",
+  "description": "A domain controller over http trafic",
+  "main": "none",
+  "scripts": {
+    "start": "npx webpack && node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EntrybotJS/Node-Domain-Front.git"
+  },
+  "keywords": [
+    "http",
+    "load-balancer",
+    "server",
+    "domain",
+    "master",
+    "cotnrol",
+    "controller",
+    "sub-domain"
+  ],
+  "author": "Julien Ferluc (EntrybotJS)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EntrybotJS/Node-Domain-Front/issues"
+  },
+  "homepage": "https://github.com/EntrybotJS/Node-Domain-Front#readme",
+  "dependencies": {
+    "commander": "^2.12.1",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "compression-webpack-plugin": "^1.0.1",
+    "webpack": "^3.8.1"
+  }
+}
