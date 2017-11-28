@@ -27,14 +27,14 @@ A node program  to control the behavior of multiple domains and subdomains
 		"name": "api",
 		"role": "http",
 		"ip": "192.168.2.5",
-		"port": 27017,
+		"port": [80, 443],
 		"domain": "example1.com"
 	},
 	{
 		"name": "db",
 		"role": "db",
 		"ip": "192.168.2.6",
-		"port": [80, 443],
+		"port": 27017,
 		"domain": "local"
 	},
 	{
