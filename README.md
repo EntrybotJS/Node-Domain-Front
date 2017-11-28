@@ -8,29 +8,25 @@ A node program  to control the behavior of multiple domains and subdomains
 		"ip": "192.168.2.2",
 		"port": 80
 	},
- 	"node": {
+ 	"web1": {
 		"ip": "192.168.2.3",
 		"port": 80,
-		"domain": "example1.com",
-		"name": "website1"
+		"domain": "example1.com"
 	},
-	"node": {
+	"web2": {
 		"ip": "192.168.2.4",
 		"port": 80,
-		"domain": "example1.com",
-		"name": "website2"
+		"domain": "example1.com"
 	},
-	"node": {
+	"api": {
 		"ip": "192.168.2.5",
 		"port": [80, 443],
-		"domain": "example1.com",
-		"name": "api"
+		"domain": "example1.com"
 	},
-	"node": {
+	"db": {
 		"ip": "192.168.2.6",
 		"port": [80, 443],
-		"domain": "local",
-		"name": "db"
+		"domain": "local"
 	},
 	"balancer": {
 		"method": "hashIP",
