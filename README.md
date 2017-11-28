@@ -30,7 +30,7 @@ A node program  to control the behavior of multiple domains and subdomains
 	},
 	"balancer": {
 		"method": "hashIP",
-		"servers": ["website1", "website2"],
+		"servers": ["web1", "web2"],
 		"port": [80, 443],
 		"ssl": {
 			"chain": "./ssl/fullchain.pem",
