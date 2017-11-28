@@ -1,6 +1,6 @@
 {
   "name": "node-domain-front",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A domain controller over http trafic",
   "main": "none",
   "scripts": {
@@ -16,7 +16,7 @@
     "server",
     "domain",
     "master",
-    "cotnrol",
+    "control",
     "controller",
     "sub-domain"
   ],
@@ -28,7 +28,9 @@
   "homepage": "https://github.com/EntrybotJS/Node-Domain-Front#readme",
   "dependencies": {
     "commander": "^2.12.1",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "type-check": "^0.3.2"
   },
   "devDependencies": {
     "babel": "^6.23.0",
