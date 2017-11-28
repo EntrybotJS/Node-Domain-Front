@@ -1,5 +1,4 @@
 const path = require('path')
-const Compression = require('compression-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
@@ -16,16 +15,6 @@ module.exports = {
 	target: 'node',
 	plugins: [
 		new webpack.NoEmitOnErrorsPlugin(),
-		new webpack.optimize.OccurrenceOrderPlugin(),
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false
-			},
-			mangle: true,
-			output: {
-				comments: false
-			},
-			sourceMap: false
-		})
+		new webpack.optimize.OccurrenceOrderPlugin()
 	]
 }

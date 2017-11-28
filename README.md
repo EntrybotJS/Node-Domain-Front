@@ -3,32 +3,42 @@ A node program  to control the behavior of multiple domains and subdomains
 
 ## Config Example (not implemented yet)
 ```json
-{
-	"this": {
+[
+	{
+		"role": "master",
 		"ip": "192.168.2.2",
 		"port": 80
 	},
- 	"web1": {
+ 	{
+		"name": "web1",
+		"role": "http",
 		"ip": "192.168.2.3",
 		"port": 80,
 		"domain": "example1.com"
 	},
-	"web2": {
+	{
+		"name": "web2",
+		"role": "http",
 		"ip": "192.168.2.4",
 		"port": 80,
 		"domain": "example1.com"
 	},
-	"api": {
+	{
+		"name": "api",
+		"role": "db",
 		"ip": "192.168.2.5",
-		"port": [80, 443],
+		"port": 27017,
 		"domain": "example1.com"
 	},
-	"db": {
+	{
+		"name": "db",
+		"role": "node",
 		"ip": "192.168.2.6",
 		"port": [80, 443],
 		"domain": "local"
 	},
-	"balancer": {
+	{
+		"role": "balancer",
 		"method": "hashIP",
 		"servers": ["web1", "web2"],
 		"port": [80, 443],
@@ -37,7 +47,7 @@ A node program  to control the behavior of multiple domains and subdomains
 			"key": "./ssl/privkey.pem"
 		}
 	}
-}
+]
 ```
 
 ## Availability
