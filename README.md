@@ -4,42 +4,37 @@ A node program  to control the behavior of multiple domains and subdomains
 ## Config Example (not implemented yet)
 ```json
 {
+	"dashboard": {
+		"enable": true,
+		"port": 8080,
+		"allowAdress": ["::1", "127.0.0.1"]
+	},
 	"nodes": [
 		{
 			"name": "web1",
 			"role": "http",
-			"ip": "192.168.2.3",
+			"host": "http://julienferluc.com",
 			"port": 80,
-			"domain": "example.com"
+			"domain": "127.0.0.1"
 		},
 		{
 			"name": "web2",
 			"role": "http",
-			"ip": "192.168.2.4",
+			"host": "http://google.ca",
 			"port": 80,
-			"domain": "example.com"
-		},
-		{
-			"name": "api",
-			"role": "http",
-			"ip": "192.168.2.5",
-			"port": 80,
-			"domain": "api.example.com"
+			"domain": "localhost"
 		}
 	],
-	"in": {
-		"domains": [
-			"example.com"
-		],
-		"subdomains": [
-			"api.example.com"
-		]
-	},
-	"out": {
-		"ports": [
-			80
-		]
-	}
+	"out": [
+		{
+			"domain": "127.0.0.1",
+			"port": 3000
+		},
+		{
+			"domain": "localhost",
+			"port": 3000
+		}
+	]
 }
 ```
 
