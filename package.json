@@ -1,6 +1,6 @@
 {
   "name": "node-domain-front",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A domain controller over http trafic",
   "main": "dist/index.js",
   "scripts": {
