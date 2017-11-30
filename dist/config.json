@@ -1,45 +1,33 @@
-[
-	{
-		"role": "master",
-		"ip": "192.168.2.2",
-		"port": 80
+{
+	"dashboard": {
+		"enable": true,
+		"port": 8080,
+		"allowAdress": ["::1", "127.0.0.1"]
 	},
- 	{
-		"name": "web1",
-		"role": "http",
-		"ip": "192.168.2.3",
-		"port": 80,
-		"domain": "example1.com"
-	},
-	{
-		"name": "web2",
-		"role": "http",
-		"ip": "192.168.2.4",
-		"port": 80,
-		"domain": "example1.com"
-	},
-	{
-		"name": "api",
-		"role": "db",
-		"ip": "192.168.2.5",
-		"port": 27017,
-		"domain": "example1.com"
-	},
-	{
-		"name": "db",
-		"role": "node",
-		"ip": "192.168.2.6",
-		"port": [80, 443],
-		"domain": "local"
-	},
-	{
-		"role": "balancer",
-		"method": "hashIP",
-		"servers": ["web1", "web2"],
-		"port": [80, 443],
-		"ssl": {
-			"chain": "./ssl/fullchain.pem",
-			"key": "./ssl/privkey.pem"
+	"nodes": [
+		{
+			"name": "web1",
+			"role": "http",
+			"host": "http://julienferluc.com",
+			"port": 80,
+			"domain": "127.0.0.1"
+		},
+		{
+			"name": "web2",
+			"role": "http",
+			"host": "http://google.ca",
+			"port": 80,
+			"domain": "localhost"
 		}
-	}
-]
+	],
+	"out": [
+		{
+			"domain": "127.0.0.1",
+			"port": 3000
+		},
+		{
+			"domain": "localhost",
+			"port": 3000
+		}
+	]
+}
